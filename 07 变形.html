@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            canvas {
+                border: 1px solid #ccc;
+            }
+        </style>
+    </head>
+<body>
+<canvas height="400" width="600"></canvas>
+<!--
+translate
+rotate
+scale
+-->
+<script>
+    var canvas = document.querySelector('canvas');
+    var ctx = canvas.getContext('2d');
+
+    /*位移 移动的是整个坐标系*/
+    /*ctx.translate(100,100);
+    setInterval(function () {
+        ctx.clearRect(-100,-100,ctx.canvas.width,ctx.canvas.height);
+        /!*使用弧度  默认旋转中心  坐标轴的原点*!/
+        /!*旋转过后坐标系旋转*!/
+        ctx.rotate(Math.PI/60);
+        ctx.strokeRect(-50,-50,100,100);
+    },100);*/
+
+    /*
+    * x轴方向的缩放
+    * y轴方向的缩放
+    * 整个坐标系
+    * */
+    ctx.scale(1,2);
+
+    ctx.fillText('你好吗',100,100);
+
+</script>
+</body>
+</html>

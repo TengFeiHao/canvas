@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+js动态去加载
+js监听当前图片加载完成
+利用图片进行绘制
+-->
+<script>
+    /*1.创建img元素  在内存*/
+    var img = document.createElement('img');
+    /*执行这个句代码已经去加载了*/
+    img.src = 'images/01.jpg';
+    /*什么时候加载完成*/
+    img.onload = function () {
+        console.log('加载完成');
+    }
+    /*2.创建 Image 对象 在内存*/
+    var img1 = new Image();
+    /*什么时候加载完成*/
+    img1.onload = function () {
+        console.log('加载完成');
+    }
+    /*执行这个句代码已经去加载了*/
+    img1.src = 'images/01.jpg';
+    /*3.使用onload事件有兼容问题  不是代码本身的兼容*/
+    /*在IE浏览器  如果有缓存的情况 */
+</script>
+</body>
+</html>

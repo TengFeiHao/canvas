@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas{
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+<canvas height="400" width="600"></canvas>
+<script>
+    var canvas = document.querySelector('canvas');
+    var ctx = canvas.getContext('2d');
+
+    /*绘制图片*/
+    var image = new Image();
+    image.onload = function () {
+        /*使用图片 完全加载完成*/
+
+        /*drawImage 方法*/
+
+        /*第一种写法*/
+        /*图片对象*/
+        /*绘制在canvas当中的x坐标*/
+        /*绘制在canvas当中的y坐标*/
+        //ctx.drawImage(image,0,0);
+
+        /*第二种写法*/
+        /*图片对象*/
+        /*绘制在canvas当中的x坐标*/
+        /*绘制在canvas当中的y坐标*/
+        /*绘制的大小 宽度*/
+        /*绘制的大小 高度*/
+        //ctx.drawImage(image,100,100,100,100);
+
+        /*第三种写法*/
+        /*图片对象*/
+        /*图片上的定位 x轴定位*/
+        /*图片上的定位 y轴定位*/
+        /*截取图片的尺寸  宽度*/
+        /*截取图片的尺寸  高度*/
+        /*绘制在canvas当中的x坐标*/
+        /*绘制在canvas当中的y坐标*/
+        /*绘制的大小 宽度*/
+        /*绘制的大小 高度*/
+        ctx.drawImage(image,400,400,400,400,0,0,300,300);
+
+    }
+    image.src = 'images/02.jpg';
+
+
+</script>
+</body>
+</html>

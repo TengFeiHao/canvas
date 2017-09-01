@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas{
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+<canvas height="400" width="600"></canvas>
+<script>
+    var canvas = document.querySelector('canvas');
+    var ctx = canvas.getContext('2d');
+
+    /*绘制图片*/
+    var image = new Image();
+    image.onload = function () {
+        ctx.drawImage(image,0,0,80,96,ctx.canvas.width/2-40,ctx.canvas.height/2-48,80,96);
+    }
+    image.src = 'images/04.png';
+
+
+
+</script>
+</body>
+</html>

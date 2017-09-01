@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            canvas {
+                border: 1px solid #ccc;
+            }
+        </style>
+    </head>
+<body>
+<canvas height="500" width="600"></canvas>
+<!--
+translate
+rotate
+scale
+-->
+<script>
+    var canvas = document.querySelector('canvas');
+    var ctx = canvas.getContext('2d');
+
+    ctx.moveTo(100,100);
+    ctx.lineTo(300,100);
+    ctx.lineWidth = 10;
+    ctx.strokeStyle = 'red';
+    ctx.stroke();
+    /*保存  上面的样式和变形*/
+    /*多次保存多个系列样式*/
+    /*存储结构是 栈 后进先出*/
+    ctx.save();
+
+    ctx.beginPath();
+    ctx.moveTo(100,200);
+    ctx.lineTo(300,200);
+    ctx.lineWidth = 20;
+    ctx.strokeStyle = 'green';
+    ctx.stroke();
+    ctx.save();
+
+
+    /*绘制和第一条一样的线*/
+    ctx.beginPath();
+    ctx.moveTo(100,300);
+    ctx.lineTo(300,300);
+    /*恢复 取之前保存的样式或变形*/
+    ctx.restore();
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(100,400);
+    ctx.lineTo(300,400);
+    /*恢复 取之前保存的样式或变形*/
+    ctx.restore();
+    ctx.stroke();
+
+
+</script>
+</body>
+</html>
